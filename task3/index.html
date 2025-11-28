@@ -12,7 +12,62 @@
     <div class="container">
         <h1>Task 3 - Network Layer</h1>
         <p>Mikołaj Cichocki 257272, Szymon Machała 257281 All rights reserved 2025</p>
-       
+       <h2>Theoretical part</h2>
+
+       <h3>IP addresses</h3>
+       <p>An Internet Protocol (IP) address is the unique identifying number assigned to any device connected to a computer network that uses the Internet Protocol. IPv4 addresses are 32-bit and IPv6 addresses are 128-bit. An IP address is not random. The creation of an IP address has the basis of math.  The Internet Assigned Numbers Authority (IANA) allocates the IP address and its creation. Addresses are divided into 3 classes.</p>
+       <p>Internet protocol enables communications between networks. It has two parts:</p>
+       <ul>
+            <li><b>Network part</b> identifies the network</li>
+            <li><b>Host part</b> identifies a specific device</li>
+       </ul>
+
+       <h3>Network classes</h3>
+       <p>The construction of the IP address consisting of 2 parts implies the need to classify all addresses into groups by length of the network part. Say, it would be fixed 50/50: 16 bits for network and 16 bits for hosts. It would mean that the whole internet can have 65536 networks with 65536 hosts each. That would not make any sense. Thus, the classes are the solution to this problem. Actually, classes alone do not serve as the complete solution, because subnetting fully enables the capacity of 32-bits length address.</p>
+
+       <img src="img/ip-classes.png" alt="ip classes">
+
+       <h3>Network subnets</h3>
+       <p>Subnetting is a technique that allows to use IP address more efficiently and to create networks that does not have to rely on an address from any class. It means that you can specify the length of host part of your choice. Effectively, you can decide how many hosts can be connected to the network.</p>
+
+       <p>The router must be told which portion of the host ID should be used for the subnet network ID. It is determined by subnet mask. Those IP address bits that represent the network ID are represented by a 1  in the mask, and those bits that represent the host ID appear as a 0 in the mask.</p>
+
+        <p>Let's say the original address is <code>192.168.1.0/24 </code> <code>11111111 11111111 11111111 00000000</code>. We can divide it by transferring some bits from host part to network part. Say 2 bits. New subnet mask is /26 and we can create 2^2=4 subnets. Each subnet can have 2^6-2=62 hosts.</p>
+
+       <img src="img/subnets.png" alt="subnets">
+
+       <h3>Default gateway & broadcast</h3>
+
+       <p><b>Default gateway</b> is the address of a device (usually a router) through which a subnet communicates with devices outside the local subnet. It serves as the exit point for all packets destined for addresses beyond the local network, forwarding any traffic not addressed to a device within the subnet.</p>
+
+       <p><b>Broadcast address</b> is used to transmit to all devices connected to a network.</p>
+
+       <h3>Routing table</h3>
+
+       <p>TODO</p>
+
+       <h3>Private and public addresses</h3>
+
+       <p><b>Private address</b> is used for communication within a LAN. They are not visible on the internet (normally). Several sets of addresses are set aside for this purpose.</p>
+
+       <img src="img/private-address.png" alt="private ip">
+
+       <p><b>Public address</b> is used to communicate outside the network. It is usually given by <i>Internet Service Provider</i>.</p>
+
+       <h3>Network address translation</h3>
+
+       <p>Firewalls use network address translation to hide the private IP address of a host from the outside world. NAT device uses its private address to <i>represent</i> the host to the internet. When packets cross the firewall, the NAT device translates the private IP address to the public IP address and vice versa.</p>
+
+       <p>It saves the available pool of private addresses, because a NAT device can use a single public address for more than one host. It keeps track of outgoing packets and it can match incoming packets with the correct host.</p>
+
+       <img src="img/NAT_Concept-en.svg.png" alt="nat">
+
+       <p><a href="https://en.wikipedia.org/wiki/Network_address_translation">Photo source</a></p>
+
+       <h3>Sources</h3>
+
+       <p>W. Brand - Networking for dummies 6th edition</p>
+
     </div>
 </p>
 </body>
