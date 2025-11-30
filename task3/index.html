@@ -44,7 +44,17 @@
 
        <h3>Routing table</h3>
 
-       <p>TODO</p>
+       <p>Each router has to decide where a packet should be forwarded. Because those are connected usually to more than one network, they have to be able to somehow make decisions. <b>Routing tables</b> are the soulution. These tables list all networks for which routes are known. When a router receives a packet, it examines the destination IP address and looks up into its Routing Table to figure out which interface packet will be sent out.</p>
+
+       <img src="img/routing-table.png" alt="routing table">
+       
+        <ul>
+            <li>Network Destination - target network</li>
+            <li>Netmask - subnet mask of network destination</li>
+            <li>Gateway - (next hop) the next router to send the packet to. Says <i>On-link</i> if it's directly connected</li>
+            <li>Interface - addresses of current device's interfaces to send through e. g. network adapter</li>
+            <li>Metric - a cost value to prefer one route if they match equally well</li>
+       </ul>
 
        <h3>Private and public addresses</h3>
 
