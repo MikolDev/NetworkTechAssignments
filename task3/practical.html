@@ -13,6 +13,9 @@
         <h1>Practical part</h1>
         <h1>1. Use ping, pathping, tracert to the following hosts:</h1>
 
+        <p>The <b>ping</b> command main purpose is to determine whether you can reach another computer from your computer. It uses ICMP protocol to send mandatory ECHO_REQUEST datagrams to the specified host computer. When the reply is received back from the host, the ping command displays how long it took to receive the response.</p>
+        <p>The <b>tracert</b> command displays a list of all the routers that a packet must go through to get from the computer where tracert is run to any other computer on the Internet. Each one of these routers is called a hop, tracert makes three attempts to contact the router at each hop and displays the response time for each of these attempts. Then, it displays the DNS name of the router (if available) and the router’s IP address.</p>
+        <p>The <b>pathping</b> command is sort of a cross between the ping command and the tracert command, combining the features of both into one tool. When you run pathping, it first traces the route to the destination address much the way tracert does. Then, it launches into a 25‐second test of each router along the way, gathering statistics on the rate of data loss to each hop. If the route has a lot of hops, this can take a long time.</p>
         <h2>1.1 Computer in local network</h2>
         <img src="img/local po zmianie.png" alt="">
         <img src="img/firewall.png" alt="">
