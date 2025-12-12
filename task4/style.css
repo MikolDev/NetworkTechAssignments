@@ -6,3 +6,7 @@ body {
     background-color: var(--dark-background);
     color: white;
 }
+
+th, td {
+  padding: 10px;
+}

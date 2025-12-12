@@ -22,12 +22,57 @@
         <p></p>
         <h2>three way handshake,connection establishment, connection release</h2>
         <p></p>
-        <h2>Ports</h2>
+        
+
         <h2>UDP protocol</h2>
         <p><b>User Datagram Protocol (UDP)</b> is a connectionless Transport layer protocol used when the overhead of a connection isn't required. After UDP has placed a packet on the network (via the IP protocol), it forgets about it. UDP doesn't guarantee that the packet arrives at its destination. Most applications that use UDP simply wait for any replies expected as a result of packets sent via UDP. If a reply doesn't arrive within a certain period of time, the applicationeither sends the packet again or gives up.</p>
-        <h2>UDP protocol parameters</h2>]
+        <h2>UDP protocol parameters</h2>
         <p></p>
         <h2>Ports</h2>
+        <p>Ports are virtual endpoints for communication. Port numbers help to identify specific processes or services on a host. They enable multiple services to run simultaneously on a single device. <br>
+            <table class="w-100">
+                <thead>
+                    <tr>
+                        <th>
+                            Types of ports
+                        </th>
+                    
+                        <th>
+                            Range
+                        </th>
+                    
+                        <th>
+                            Used for
+                        </th>
+                    
+                        <th>
+                            Examples
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Well-Known</td>
+                        <td>0 - 1023</td>
+                        <td>Reserved for common services and protocols (e.g., HTTP, FTP, SMTP).</td>
+                        <td>HTTP(80), HTTPS(443), FTP(21), SSH(22)</td>
+
+                    </tr>
+                    <tr>
+                        <td>Registered Ports</td>
+                        <td>1024 - 49151</td>
+                        <td>Assigned by IANA for specific services that are not as common.</td>
+                        <td>MySQL(3306), Microsoft SQL Server(1433)</td>
+                    </tr>
+                    <tr>
+                        <td>Dynamic or Private</td>
+                        <td>49152 - 65535</td>
+                        <td>Temporary or private connections, often assigned dynamically by the OS.</td>
+                        <td>Ephemeral ports: Used for client-side connections in TCP/IP networking.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
 
        
 
