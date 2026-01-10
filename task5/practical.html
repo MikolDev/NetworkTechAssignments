@@ -15,40 +15,42 @@
 <h2>2.1. DNS system</h2>
 
 <h3>2.1.1. Display DNS settings on your computer using Control Panel and ipconfig. Find google DNS server and change DNS settings on your computer to use this server.</h3>
-<img src="img/dnsipconfig.png" alt="">
-<img src="img/dnsgoogle.png" alt="">
+<img src="img/dnsipconfig.png" alt="" class="img-fluid">
+<img src="img/dnsgoogle.png" alt="" class="img-fluid">
 <h3>2.1.2. Using dig, host, nslookup find the following information:</h3>
 <h4>2.1.2.1. Domain names and corresponding IP addresses of computers in lodz.pl domain</h4>
-<img src="img/lodz.pl.png" alt="">
+<img src="img/lodz.pl.png" alt="" class="img-fluid">
 <h4>2.1.2.2. A computer somewhere in Europe, outside Lodz and find all the available information about DNS settings of this computer</h4>
-<img src="img/de.png" alt="">
-<img src="img/de2.png" alt="">
+<img src="img/de.png" alt="" class="img-fluid">
+<img src="img/de2.png" alt="" class="img-fluid">
 <h4>2.1.2.3. A computer somewhere outside Europe (eg. Exotic country) and find all the available information about DNS settings of this computer</h4>
-<img src="img/ng.png" alt="">
-<img src="img/ng2.png" alt="">
+<img src="img/ng.png" alt="" class="img-fluid">
+<img src="img/ng2.png" alt="" class="img-fluid">
 <h4>2.1.2.4. Verify DNS assignment for localhost</h4>
-<img src="img/localhost.png" alt="">
+<img src="img/localhost.png" alt="" class="img-fluid">
 <h4>2.1.2.5. Flush dns memory on your computer using ipconfig</h4>
-<img src="img/flush.png" alt="">
+<img src="img/flush.png" alt="" class="img-fluid">
 <h4>2.1.2.6. Change the file hosts in such a way that when you enter ifeXX.com the website msn.com will display (where XX is the number of your ife group).</h4>
-<img src="img/txtcorrect.png" alt="">
-<img src="img/ife26.png" alt="">
+<img src="img/txtcorrect.png" alt="" class="img-fluid">
+<img src="img/ife26.png" alt="" class="img-fluid">
 <h2>2.2. Mail system</h2>
 <h3>2.2.1. Configure Thunderbird to send and receive e-mails from any e-mail server.</h3>
 
 <h3>2.2.2. Send an e-mail to:</h3>
 
 <h4>2.2.2.1. non-existent mail server</h4>
-<img src="img/2.1.png" alt="">
+<img src="img/2.1.png" alt="" class="img-fluid">
 <h4>2.2.2.2. non-existent user on an existent e-mail server</h4>
-<img src="img/userdoesnotexist.png" alt="">
+<img src="img/userdoesnotexist.png" alt="" class="img-fluid">
 <h4>2.2.2.3. a server which is not an e-mail server you must receive and be understand the answer.</h4>
+<p>Tried to send an email to <code>tester@studife.it.p.lodz.pl</code>, because the server exists, but is not an email server. It doesn't have MX record.</p>
+<p>If an email is sent to a domain without an MX record, the sending mail server attempts delivery using the domain’s A record. Since the target server does not run an SMTP service, the connection fails and the message is eventually returned to the sender as undeliverable.</p>
 
 <h3>2.2.3. Using Wireshark analyse the process of sending and receiving e-mails from Thunderbird. Identify all protocols involved in the process of sending and receiving e-mails</h3>
 <p>Sending e-mail</p>
-<img src="img/wireshark1.jpg" alt="">
+<img src="img/email-sent.png" alt="" class="img-fluid">
 <p>Reciving e-mail</p>
-<img src="img/wireshark2.jpg" alt="">
+<img src="img/email-received.png" alt="" class="img-fluid">
 <h3>2.2.4. Send an e-mail connecting to a smtp server using telnet</h3>
 
         
